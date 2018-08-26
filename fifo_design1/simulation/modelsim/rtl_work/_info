@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim
+vAsyn_Fifo
+Z1 !s110 1535269429
+!i10b 1
+!s100 3YM9B<ZVJcK8F=]N<eY>L0
+IBm`I2Zba;QBiWBBcOnjmA1
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1342011765
+8C:/Users/Administrator/Desktop/FIFO-design/Asyn_Fifo.v
+FC:/Users/Administrator/Desktop/FIFO-design/Asyn_Fifo.v
+L0 21
+Z3 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1535269429.085000
+!s107 C:/Users/Administrator/Desktop/FIFO-design/Asyn_Fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/FIFO-design|C:/Users/Administrator/Desktop/FIFO-design/Asyn_Fifo.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/FIFO-design
+n@asyn_@fifo
+vAsyn_Fifo_vlg_tst
+R1
+!i10b 1
+!s100 HaEI<IFSQS]Q`Vz624bIm2
+ID=afSiRO_1VNPUKjI0nlC2
+R2
+R0
+w1535269338
+8C:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim/Asyn_Fifo.vt
+FC:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim/Asyn_Fifo.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1535269429.194000
+!s107 C:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim/Asyn_Fifo.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim|C:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim/Asyn_Fifo.vt|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+C:/Users/Administrator/Desktop/FIFO-design/simulation/modelsim
+n@asyn_@fifo_vlg_tst
+vDul_Ram
+R1
+!i10b 1
+!s100 ]@FYz`T2jo`b[d4>PiI=53
+IZEAZ]1F@:L_32OnhcI5QL3
+R2
+R0
+w1535204590
+8C:/Users/Administrator/Desktop/FIFO-design/Dul_Ram.v
+FC:/Users/Administrator/Desktop/FIFO-design/Dul_Ram.v
+L0 10
+R3
+r1
+!s85 0
+31
+!s108 1535269428.944000
+!s107 C:/Users/Administrator/Desktop/FIFO-design/Dul_Ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Administrator/Desktop/FIFO-design|C:/Users/Administrator/Desktop/FIFO-design/Dul_Ram.v|
+!i113 1
+R4
+R5
+n@dul_@ram

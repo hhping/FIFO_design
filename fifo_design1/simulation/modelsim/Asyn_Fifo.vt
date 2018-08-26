@@ -1,0 +1,92 @@
+// Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus II License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "08/25/2018 21:49:51"
+                                                                                
+// Verilog Test Bench template for design : Asyn_Fifo
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ns
+module Asyn_Fifo_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg r_clk;
+reg r_clr;
+reg r_re;
+reg w_clk;
+reg w_clr;
+reg [3:0] w_data;
+reg w_we;
+// wires                                               
+wire r_aempty;
+wire [3:0]  r_data;
+wire r_empty;
+wire w_afull;
+wire w_full;
+
+// assign statements (if any)                          
+Asyn_Fifo i1 (
+// port map - connection between master ports and signals/registers   
+	.r_aempty(r_aempty),
+	.r_clk(r_clk),
+	.r_clr(r_clr),
+	.r_data(r_data),
+	.r_empty(r_empty),
+	.r_re(r_re),
+	.w_afull(w_afull),
+	.w_clk(w_clk),
+	.w_clr(w_clr),
+	.w_data(w_data),
+	.w_full(w_full),
+	.w_we(w_we)
+);
+initial                                                
+begin                                                  
+    #0
+	r_clk =1;   r_re = 0; 
+	r_clr =1;   w_clk =0;
+    w_clr = 0; w_data =0;   w_we =0;
+    #20
+	 w_clr = 1;
+    #100
+	repeat(100)
+    @(posedge w_clk)begin
+	   if(~w_afull)
+        w_data = w_data + 1; 
+	    w_we = 1;
+	end
+end      
+
+initial begin
+   #150;
+   repeat(100)begin
+   @(posedge r_clk)
+      if(!r_empty) r_re = 1; end
+end
+always #4 r_clk =  ~r_clk;   
+always #11 w_clk =  ~w_clk;                      
+                                                       
+                                                  
+endmodule
+

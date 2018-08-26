@@ -1,0 +1,74 @@
+|Asyn_Fifo
+w_clk => w_clk.IN1
+w_clr => clr.IN0
+w_data[0] => w_data[0].IN1
+w_data[1] => w_data[1].IN1
+w_data[2] => w_data[2].IN1
+w_data[3] => w_data[3].IN1
+w_we => always8.IN1
+w_we => always9.IN1
+w_we => always10.IN1
+w_we => comb.IN1
+w_full << w_full~reg0.DB_MAX_OUTPUT_PORT_TYPE
+w_afull << w_afull~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_clr => clr.IN1
+r_clk => r_clk.IN1
+r_data[0] << r_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_data[1] << r_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_data[2] << r_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_data[3] << r_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_re => always13.IN1
+r_re => always13.IN1
+r_re => Load.IN1
+r_re => always15.IN1
+r_re => always16.IN1
+r_re => always16.IN1
+r_re => always16.IN1
+r_re => always13.IN1
+r_empty << r_empty~reg0.DB_MAX_OUTPUT_PORT_TYPE
+r_aempty << r_aempty~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Asyn_Fifo|Dul_Ram:Dul_Ram
+ac => Ram.we_a.CLK
+ac => Ram.waddr_a[2].CLK
+ac => Ram.waddr_a[1].CLK
+ac => Ram.waddr_a[0].CLK
+ac => Ram.data_a[3].CLK
+ac => Ram.data_a[2].CLK
+ac => Ram.data_a[1].CLK
+ac => Ram.data_a[0].CLK
+ac => Ram.CLK0
+aa[0] => Ram.waddr_a[0].DATAIN
+aa[0] => Ram.WADDR
+aa[1] => Ram.waddr_a[1].DATAIN
+aa[1] => Ram.WADDR1
+aa[2] => Ram.waddr_a[2].DATAIN
+aa[2] => Ram.WADDR2
+ad[0] => Ram.data_a[0].DATAIN
+ad[0] => Ram.DATAIN
+ad[1] => Ram.data_a[1].DATAIN
+ad[1] => Ram.DATAIN1
+ad[2] => Ram.data_a[2].DATAIN
+ad[2] => Ram.DATAIN2
+ad[3] => Ram.data_a[3].DATAIN
+ad[3] => Ram.DATAIN3
+aw => Ram.we_a.DATAIN
+aw => Ram.WE
+bc => bd[0]~reg0.CLK
+bc => bd[1]~reg0.CLK
+bc => bd[2]~reg0.CLK
+bc => bd[3]~reg0.CLK
+ba[0] => Ram.RADDR
+ba[1] => Ram.RADDR1
+ba[2] => Ram.RADDR2
+bd[0] <= bd[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bd[1] <= bd[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bd[2] <= bd[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bd[3] <= bd[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+br => bd[0]~reg0.ENA
+br => bd[1]~reg0.ENA
+br => bd[2]~reg0.ENA
+br => bd[3]~reg0.ENA
+
+
